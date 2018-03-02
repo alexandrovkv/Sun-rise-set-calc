@@ -2,10 +2,6 @@
  *
  * Sun rise/set library.
  *
- * $Id$
- *
- * $Log:
- *
  */
 
 /**
