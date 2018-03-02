@@ -2,14 +2,7 @@
  *
  * Sun rise/set library.
  *
- * $Id$
- *
- * $Log:
- *
  */
-
-char *sunriset_c_cvsid =
-    "$Id$";
 
 /**
  * @file sunriset.c Sun rise/set implementation.
