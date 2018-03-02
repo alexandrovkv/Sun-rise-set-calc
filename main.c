@@ -2,15 +2,7 @@
  *
  * Sun rise/set table.
  * gcc -Wall -W sunriset.c main.c -o srstable -lm
- *
- * $Id$
- *
- * $Log:
- *
  */
-
-char *main_c_cvsid =
-    "$Id$";
 
 /**
  * @file main.c Sun rise/set table implementation.
@@ -80,37 +72,6 @@ static void print_table( void )
 
     t = time( NULL );
     tm = gmtime( &t );
-
-    if( opt_debug ) {
-	int h, m, s;
-	double sec;
-	double e = get_eot( tm->tm_yday );
-	double sn = sin( opt_latitude * DEGRAD );
-
-	dd2dms( opt_latitude, &h, &m, &sec );
-	fprintf( stderr, "%s %dº %d' %.2lf\"",
-		 opt_latitude < 0 ? "S" : "N", h, m, sec);
-	dd2dms( opt_longitude, &h, &m, &sec );
-	fprintf( stderr, "  %s %dº %d' %.2lf\"\n",
-		 opt_longitude < 0 ? "W" : "E", h, m, sec);
-
-	hh2hms( opt_longitude * DEGHOUR, &h, &m, &s );
-	fprintf( stderr, "local mean solar time: %02d:%02d:%02d\n",
-		 tm->tm_hour + h, tm->tm_min + m, tm->tm_sec + s );
-	hh2hms( opt_longitude * DEGHOUR + e / 60., &h, &m, &s );
-	fprintf( stderr, "local true solar time: %02d:%02d:%02d\n",
-		 tm->tm_hour + h, tm->tm_min + m, tm->tm_sec + s );
-
-	for( h = 0; h < 12; h++ ) {
-	    double a = RADEG * atan( sn * tan( ( double )h * 15. * DEGRAD ) );
-
-	    if( a < 0. )
-		a += 180.;
-
-	    fprintf( stderr, "%.2lf  ", a );
-	}
-	fprintf( stderr, "\n" );
-    }
 
     if( opt_year != -1 )
 	tm->tm_year = opt_year - 1900;
