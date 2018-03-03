@@ -1,7 +1,6 @@
 /* -*- Mode: C; c-basic-offset: 4; -*-
  *
  * Sun rise/set table.
- * gcc -Wall -W sunriset.c main.c -o srstable -lm
  */
 
 /**
