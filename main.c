@@ -340,7 +340,6 @@ static void print_eot( int day )
 
     e = get_eot( day );
 
-    // ./srstable -e | graph -T ps -X "day of the year" -Y "minutes" -f 0.02 -g 3 -x 0 365 > eot.ps
     fprintf( stdout, "%d%s%lf\n", day, delimiter, e );
 }
 
