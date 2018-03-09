@@ -306,13 +306,13 @@ static void print_csv_header( void )
 	fprintf( stdout, "data" );
 
 	if( opt_astronomical_twilight )
-	    fprintf( stdout, "%sastr_start", delimiter );
+	    fprintf( stdout, "%sastr_end", delimiter );
 
 	if( opt_nautical_twilight )
-	    fprintf( stdout, "%snaut_start", delimiter );
+	    fprintf( stdout, "%snaut_end", delimiter );
 
 	if( opt_civil_twilight )
-	    fprintf( stdout, "%sciv_start", delimiter );
+	    fprintf( stdout, "%sciv_end", delimiter );
 
 	fprintf( stdout, "%srise", delimiter );
 
@@ -322,13 +322,13 @@ static void print_csv_header( void )
 	fprintf( stdout, "%sset", delimiter );
 
 	if( opt_civil_twilight )
-	    fprintf( stdout, "%sciv_end", delimiter );
+	    fprintf( stdout, "%sciv_start", delimiter );
 
 	if( opt_nautical_twilight )
-	    fprintf( stdout, "%snaut_end", delimiter );
+	    fprintf( stdout, "%snaut_start", delimiter );
 
 	if( opt_astronomical_twilight )
-	    fprintf( stdout, "%sastr_end", delimiter );
+	    fprintf( stdout, "%sastr_start", delimiter );
 
 	fprintf( stdout, "%sday_length\n", delimiter );
     }
