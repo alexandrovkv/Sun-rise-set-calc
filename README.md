@@ -5,6 +5,23 @@ Sun rise/set calculator (based on [Paul Schlyter](http://stjarnhimlen.se/english
   gcc -Wall -W sunriset.c main.c -o srstable -lm
 ```
 ## Usage
+### Command line options
+```
+  -l <num>,  --latitude=<num>    - latitude (in decimal degrees, + is north)
+  -L <num>,  --longitude=<num>   - longitude (in decimal degrees, + is east)
+  -O <num>,  --offset=<num>      - offset from UTC (in seconds)
+  -Y <num>,  --year=<num>        - set year (default - current)
+  -M <num>,  --month=<num>       - set month (default - all)
+  -D <num>,  --day=<num>         - set day (default - all)
+  -n,        --noon              - print noon time
+  -C,        --civil             - print civil twilight times
+  -N,        --nautical          - print nautical twilight times
+  -A,        --astronomical      - print astronomical twilight times
+  -e,        --eot               - print Equation of Time
+  -c,        --csv               - out in CSV format
+```
+
+
 ```
 ./srstable -l 30 -L 60 -O 10800 -Y 2018 -M 3 -CNA
 2018-03-01    05:39:23    06:28:23    07:16:27    07:58:13    18:26:28    19:08:13    19:56:17    20:45:17    10:28:14
@@ -74,19 +91,4 @@ data,astr_end,naut_end,civ_end,rise,noon,set,civ_start,naut_start,astr_start,day
 2018-03-29,03:59:31,04:59:18,05:51:43,06:34:02,13:04:47,19:35:33,20:17:52,21:10:17,22:10:04,13:01:30
 2018-03-30,03:55:10,04:55:46,05:48:32,06:31:00,13:04:29,19:37:59,20:20:27,21:13:13,22:13:49,13:06:58
 2018-03-31,03:50:45,04:52:12,05:45:21,06:27:58,13:04:12,19:40:25,20:23:02,21:16:11,22:17:38,13:12:26
-```
-### Command line options
-```
-  -l <num>,  --latitude=<num>    - latitude (in decimal degrees, + is north)
-  -L <num>,  --longitude=<num>   - longitude (in decimal degrees, + is east)
-  -O <num>,  --offset=<num>      - offset from UTC (in seconds)
-  -Y <num>,  --year=<num>        - set year (default - current)
-  -M <num>,  --month=<num>       - set month (default - all)
-  -D <num>,  --day=<num>         - set day (default - all)
-  -n,        --noon              - print noon time
-  -C,        --civil             - print civil twilight times
-  -N,        --nautical          - print nautical twilight times
-  -A,        --astronomical      - print astronomical twilight times
-  -e,        --eot               - print Equation of Time
-  -c,        --csv               - out in CSV format
 ```
