@@ -303,7 +303,7 @@ static void print_csv_header( void )
     if( opt_eot ) {
 	fprintf( stdout, "doy,eot\n" );
     } else {
-	fprintf( stdout, "data" );
+	fprintf( stdout, "date" );
 
 	if( opt_astronomical_twilight )
 	    fprintf( stdout, "%sastr_end", delimiter );
