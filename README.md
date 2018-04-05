@@ -59,7 +59,7 @@ Sun rise/set calculator (based on [Paul Schlyter](http://stjarnhimlen.se/english
 In CSV foemat
 ```
 ./srstable -l 60 -L 30 -O 10800 -Y 2018 -M 3 -nCNA -c
-data,astr_end,naut_end,civ_end,rise,noon,set,civ_start,naut_start,astr_start,day_length
+date,astr_end,naut_end,civ_end,rise,noon,set,civ_start,naut_start,astr_start,day_length
 2018-03-01,05:39:23,06:28:23,07:16:27,07:58:13,13:12:20,18:26:28,19:08:13,19:56:17,20:45:17,10:28:14
 2018-03-02,05:36:23,06:25:32,07:13:37,07:55:17,13:12:08,18:29:00,19:10:40,19:58:44,20:47:53,10:33:42
 2018-03-03,05:33:21,06:22:40,07:10:45,07:52:21,13:11:56,18:31:31,19:13:07,20:01:12,20:50:30,10:39:10
